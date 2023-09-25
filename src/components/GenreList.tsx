@@ -16,7 +16,7 @@ const GenreList = ({selectedGenre, onSelectGenre}: Props) => {
   return (
     <List>
       <Button variant="link" paddingY={1} onClick={() => onSelectGenre(null)}>
-        <Text fontWeight={selectedGenre === null ? 'bold' : 'normal'} fontSize="lg">All</Text>
+        <Text fontWeight={selectedGenre ? 'normal' : 'bold'} fontSize="lg">All</Text>
       </Button>
       {data.map(genre =>
         <ListItem key={genre.id} paddingY={1}>
